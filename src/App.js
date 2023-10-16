@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "./UI/Card";
+import Card from "./Components/UI/Card";
 import AddUser from "./Components/Users/AddUser";
 import "./index.css";
 
