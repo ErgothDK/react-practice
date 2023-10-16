@@ -1,19 +1,15 @@
 import React from "react";
+import Card from "./UI/Card";
+import AddUser from "./Components/Users/AddUser";
+import "./index.css";
 
 function App() {
   return (
     <div>
-      <form onSubmit={submitFormHandler}>
-        <div>
-          <label>Username</label>
-          <input type="text" onChange={txtUsernameChangeHandler} />
-        </div>
-        <div>
-          <label>Age (Years)</label>
-          <input type="number" onChange={txtAgeChangeHandler} />
-        </div>
-        <button type="submit">Add User</button>
-      </form>
+      <Card>
+        <AddUser />
+      </Card>
+
       <div>
         <ul>
           <li>Max (31 years old)</li>
