@@ -20,7 +20,7 @@ const AddUser = (props) => {
 
   const showErrorModal = (
     <ErrorModal
-      title={"Invalid Input"}
+      title="Invalid Input"
       message={errorMessage}
       onCloseModalHandler={closeModalHandler}
     />
@@ -74,7 +74,7 @@ const AddUser = (props) => {
             name="age"
           />
         </div>
-        <Button>Add User</Button>
+        <Button type="submit">Add User</Button>
       </form>
     </Card>
   );
