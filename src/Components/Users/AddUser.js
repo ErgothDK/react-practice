@@ -3,6 +3,7 @@ import styles from "./AddUser.module.css";
 import Button from "../UI/Button";
 import Card from "../UI/Card";
 import ErrorModal from "../UI/ErrorModal";
+import Wrapper from "../Helpers/Wrapper";
 
 const AddUser = (props) => {
   const [showModal, setShowModal] = useState(false);
@@ -53,30 +54,32 @@ const AddUser = (props) => {
   }
 
   return (
-    <Card className={styles.input}>
+    <Wrapper>
       {showModal && showErrorModal}
-      <form onSubmit={submitFormHandler}>
-        <div>
-          <label>Username</label>
-          <input
-            type="text"
-            onChange={txtInputChangeHandler}
-            value={userInput.username}
-            name="username"
-          />
-        </div>
-        <div>
-          <label>Age (Years)</label>
-          <input
-            type="number"
-            onChange={txtInputChangeHandler}
-            value={userInput.age}
-            name="age"
-          />
-        </div>
-        <Button type="submit">Add User</Button>
-      </form>
-    </Card>
+      <Card className={styles.input}>
+        <form onSubmit={submitFormHandler}>
+          <div>
+            <label>Username</label>
+            <input
+              type="text"
+              onChange={txtInputChangeHandler}
+              value={userInput.username}
+              name="username"
+            />
+          </div>
+          <div>
+            <label>Age (Years)</label>
+            <input
+              type="number"
+              onChange={txtInputChangeHandler}
+              value={userInput.age}
+              name="age"
+            />
+          </div>
+          <Button type="submit">Add User</Button>
+        </form>
+      </Card>
+    </Wrapper>
   );
 };
 
